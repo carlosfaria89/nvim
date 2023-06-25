@@ -14,3 +14,9 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 -- Ctrl c to be actually escape
 vim.keymap.set("i", "<C-c>", "<Esc>")
+
+-- Disable Ctrl+z to prevent inadvertebly exiting nvim
+vim.keymap.set("n", "<C-z>", "<nop>")
+
+-- Use Ctrl+z in insert mode to undo changes
+vim.keymap.set("i", "<C-z>", "<C-O>u")
